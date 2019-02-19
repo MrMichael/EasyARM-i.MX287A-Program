@@ -12,6 +12,8 @@
 #define direction_path	"/sys/devices/virtual/gpio/gpio68/direction"
 #define value_path	"/sys/devices/virtual/gpio/gpio68/value"
 
+//先通过/sys/class/gpio/目录，导出特定的GPIO，然后再修改其文件，让系统文件的变化而执行相应操作。
+
 int main(void)
 {
 	int fd = 0;
